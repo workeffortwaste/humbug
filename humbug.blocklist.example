@@ -1,0 +1,11 @@
+# Artist and track rules match normalized full credits and titles.
+# artist:Example Artist
+# track:Example Song
+#
+# Keywords match whole words or phrases in titles and albums.
+# keyword:example
+# The Block button adds exact, case-sensitive artist/title pairs:
+# exact:Artist Name<TAB>Song Title
+# <TAB> above means one literal tab, not those five characters.
+# Backslash, tab, carriage return and newline within either field are escaped
+# as \\, \t, \r and \n. UTF-8 is preserved. Empty exact fields are rejected.

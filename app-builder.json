@@ -1,0 +1,38 @@
+{
+  "package_name": "humbug",
+  "version": "1.0.0-rev1",
+  "app_name": "Humbug",
+  "bin_name": "humbug",
+  "description": "Keep unwanted tracks off your office or home Sonos speakers and Google Cast receivers.",
+  "store": {
+    "summary": "Keep unwanted tracks off your Sonos speakers and Google Cast receivers.",
+    "description": "Don't want to get Whammed? Humbug is a pocket-sized CardputerZero bouncer for Sonos speakers and Google Cast receivers. Including an optional built-in Christmas blocklist or customise your own blocked tracks and artists all year round.",
+    "categories": [
+      "Media"
+    ],
+    "screenshots": [
+      "assets/preview/dashboard-side-a.png",
+      "assets/preview/playing-sonos.png",
+      "assets/preview/blocked.png",
+      "assets/preview/dashboard-side-b.png",
+      "assets/preview/dashboard-blank-tape.png",
+      "assets/preview/dashboard-bootleg.png"
+    ],
+    "icon": "assets/images/humbug-store-icon.png",
+    "license": "MIT",
+    "author": {
+      "github": "workeffortwaste",
+      "display_name": "Chris Johnson"
+    },
+    "share_code": "HBUG",
+    "permissions": {
+      "camera": false,
+      "microphone": false,
+      "imu": false,
+      "network": true,
+      "additional_hardware": false,
+      "background_service": false,
+      "external_display": false
+    }
+  }
+}

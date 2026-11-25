@@ -1,0 +1,73 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {"major": 3, "minor": 31, "patch": 0},
+    "configurePresets": [
+        {
+            "name": "core",
+            "displayName": "Linux CLI and backend tests",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/core",
+            "cacheVariables": {
+                "HUMBUG_BUILD_GUI": "OFF",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "linux-desktop",
+            "displayName": "Linux desktop simulator",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/desktop",
+            "cacheVariables": {
+                "USE_DESKTOP": "ON",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "cp0-cross",
+            "displayName": "Cardputer Zero aarch64 Linux",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/cp0-cross",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/cp0-aarch64-linux-gnu.cmake",
+                "CMAKE_CONFIGURATION_TYPES": "Debug;Release",
+                "CM0_SDK_ROOT": "${sourceDir}/.cache/sdk_bsp-src",
+                "CM0_ALLOW_FETCH_DEPS": "ON",
+                "FETCHCONTENT_BASE_DIR": "${sourceDir}/.cache/cp0-deps",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/cp0-cross/install",
+                "USE_DESKTOP": "OFF",
+                "APP_USE_DRM": "OFF",
+                "BUILD_TESTING": "OFF"
+            }
+        }
+    ],
+    "buildPresets": [
+        {"name": "core", "configurePreset": "core"},
+        {"name": "linux-desktop", "configurePreset": "linux-desktop"},
+        {"name": "cp0-cross-dbg", "configurePreset": "cp0-cross", "configuration": "Debug"},
+        {"name": "cp0-cross-rel", "configurePreset": "cp0-cross", "configuration": "Release"}
+    ],
+    "testPresets": [
+        {"name": "core", "configurePreset": "core", "output": {"outputOnFailure": true}},
+        {"name": "linux-desktop", "configurePreset": "linux-desktop", "output": {"outputOnFailure": true}}
+    ],
+    "packagePresets": [
+        {
+            "name": "cp0-cross-deb",
+            "configurePreset": "cp0-cross",
+            "generators": ["DEB"],
+            "configurations": ["Release"],
+            "configFile": "${sourceDir}/build/cp0-cross/CPackConfig.cmake",
+            "packageDirectory": "${sourceDir}/dist"
+        }
+    ],
+    "workflowPresets": [
+        {
+            "name": "cp0-cross-package",
+            "steps": [
+                {"type": "configure", "name": "cp0-cross"},
+                {"type": "build", "name": "cp0-cross-rel"},
+                {"type": "package", "name": "cp0-cross-deb"}
+            ]
+        }
+    ]
+}

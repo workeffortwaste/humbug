@@ -1,0 +1,181 @@
+{
+  "transparentIndex": 0,
+  "roles": {
+    "bg": 1,
+    "panel": 2,
+    "well": 3,
+    "edge": 4,
+    "under": 5,
+    "shadow": 6,
+    "ink": 7,
+    "muted": 8,
+    "green": 9,
+    "greenHi": 10,
+    "greenLo": 11,
+    "warn": 12,
+    "warnHi": 13,
+    "warnLo": 14,
+    "buttonInk": 15,
+    "active": 16,
+    "activeHi": 17,
+    "activeLo": 18,
+    "lip": 19,
+    "shell": 20,
+    "shellHi": 21,
+    "shellLow": 22,
+    "paper": 23,
+    "paperShade": 24,
+    "tapePink": 25,
+    "hub": 26,
+    "tape": 27,
+    "oxide": 28,
+    "redPaper": 29,
+    "glass": 30,
+    "labelInk": 31,
+    "activeInk": 32,
+    "warnInk": 33,
+    "greenInk": 34,
+    "cassetteScratch": 35
+  },
+  "components": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 26
+    },
+    "connection": {
+      "x": 143,
+      "y": 3,
+      "width": 90,
+      "height": 17
+    },
+    "blocker": {
+      "x": 247,
+      "y": 3,
+      "width": 60,
+      "height": 17
+    },
+    "blocker_off": {
+      "x": 247,
+      "y": 3,
+      "width": 60,
+      "height": 17
+    },
+    "footer": {
+      "x": 0,
+      "y": 147,
+      "width": 320,
+      "height": 23
+    },
+    "cassette": {
+      "x": 10,
+      "y": 30,
+      "width": 179,
+      "height": 115
+    },
+    "counters": {
+      "x": 194,
+      "y": 31,
+      "width": 118,
+      "height": 66
+    },
+    "latest": {
+      "x": 194,
+      "y": 101,
+      "width": 118,
+      "height": 42
+    },
+    "room": {
+      "x": 10,
+      "y": 29,
+      "width": 302,
+      "height": 22
+    },
+    "deck": {
+      "x": 10,
+      "y": 54,
+      "width": 302,
+      "height": 73
+    },
+    "speaker": {
+      "x": 23,
+      "y": 98,
+      "width": 25,
+      "height": 25
+    },
+    "timeline": {
+      "x": 10,
+      "y": 130,
+      "width": 301,
+      "height": 14
+    },
+    "play": {
+      "x": 4,
+      "y": 4,
+      "width": 6,
+      "height": 7
+    },
+    "pause": {
+      "x": 4,
+      "y": 4,
+      "width": 5,
+      "height": 6
+    },
+    "options_panel": {
+      "x": 10,
+      "y": 30,
+      "width": 302,
+      "height": 112
+    },
+    "key_69": {
+      "x": 4,
+      "y": 4,
+      "width": 71,
+      "height": 17
+    },
+    "key_69_active": {
+      "x": 4,
+      "y": 4,
+      "width": 71,
+      "height": 17
+    },
+    "deck_dock": {
+      "x": 9,
+      "y": 80,
+      "width": 304,
+      "height": 63
+    },
+    "counter_badge": {
+      "x": 4,
+      "y": 4,
+      "width": 35,
+      "height": 15
+    },
+    "key_140": {
+      "x": 4,
+      "y": 4,
+      "width": 142,
+      "height": 17
+    },
+    "key_154_active": {
+      "x": 4,
+      "y": 4,
+      "width": 156,
+      "height": 17
+    },
+    "cassette_blank_label": {
+      "x": 28,
+      "y": 45,
+      "width": 140,
+      "height": 16
+    },
+    "cassette_bootleg_scratch": {
+      "x": 32,
+      "y": 45,
+      "width": 53,
+      "height": 13
+    }
+  },
+  "compressedBytes": 10916
+}
