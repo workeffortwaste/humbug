@@ -160,3 +160,4 @@ alt-themes.json
 TODO
 
 *.md
+!/README.md
